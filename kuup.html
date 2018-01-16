@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <title>eDidaktikum | kuup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <!-- Bootstrap v3.3.7 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome-->
+    <script src="https://use.fontawesome.com/8a0e9b6510.js"></script>
+
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        #wrapper {
+            padding-top: 5%;
+            padding-bottom: 40px;
+        }
+        
+        .viewport {
+            -webkit-perspective: 800px;
+            -moz-perspective: 800px;
+            -ms-perspective: 800px;
+            -o-perspective: 800px;
+            perspective: 800px;
+            -webkit-perspective-origin: 50% 400px;
+            -moz-perspective-origin: 50% 400px;
+            -ms-perspective-origin: 50% 400px;
+            -o-perspective-origin: 50% 400px;
+            perspective-origin: 50% 400px;
+            -webkit-transform: scale(0.8, 0.8);
+            -moz-transform: scale(0.8, 0.8);
+            -ms-transform: scale(0.8, 0.8);
+            -o-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+            -webkit-box-reflect: below 100px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, 0.1)));
+        }
+        
+        .cube {
+            position: relative;
+            margin: 0 auto;
+            height: 400px;
+            width: 400px;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: rotateX(136deg) rotateY(1122deg);
+            -moz-transform: rotateX(136deg) rotateY(1122deg);
+            -ms-transform: rotateX(136deg) rotateY(1122deg);
+            -o-transform: rotateX(136deg) rotateY(1122deg);
+            transform: rotateX(136deg) rotateY(1122deg);
+        }
+        
+        .cube>div {
+            overflow: hidden;
+            position: absolute;
+            opacity: .93;
+            height: 400px;
+            width: 400px;
+            background-image: url("img/cube.png");
+            -webkit-touch-callout: none;
+            -moz-touch-callout: none;
+            -ms-touch-callout: none;
+            -o-touch-callout: none;
+            touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        
+        .cube>div>div.cube-image {
+            width: 400px;
+            height: 400px;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+            line-height: 400px;
+            font-size: 60px;
+            text-align: center;
+            color: #303638;
+            -webkit-transition: color 600ms;
+            -moz-transition: color 600ms;
+            -ms-transition: color 600ms;
+            -o-transition: color 600ms;
+            transition: color 600ms;
+        }
+        
+        .cube>div>div.cube-image.active {
+            color: #1abc9c;
+        }
+        
+        .cube>div:hover {
+            cursor: pointer;
+        }
+        
+        .cube>div:active {
+            cursor: pointer;
+        }
+        
+        .cube>div:first-child {
+            -webkit-transform: rotateX(90deg) translateZ(200px);
+            -moz-transform: rotateX(90deg) translateZ(200px);
+            -ms-transform: rotateX(90deg) translateZ(200px);
+            -o-transform: rotateX(90deg) translateZ(200px);
+            transform: rotateX(90deg) translateZ(200px);
+            outline: 1px solid transparent;
+        }
+        
+        .cube>div:nth-child(2) {
+            -webkit-transform: translateZ(200px);
+            -moz-transform: translateZ(200px);
+            -ms-transform: translateZ(200px);
+            -o-transform: translateZ(200px);
+            transform: translateZ(200px);
+            outline: 1px solid transparent;
+        }
+        
+        .cube>div:nth-child(3) {
+            -webkit-transform: rotateY(90deg) translateZ(200px);
+            -moz-transform: rotateY(90deg) translateZ(200px);
+            -ms-transform: rotateY(90deg) translateZ(200px);
+            -o-transform: rotateY(90deg) translateZ(200px);
+            transform: rotateY(90deg) translateZ(200px);
+            outline: 1px solid transparent;
+        }
+        
+        .cube>div:nth-child(4) {
+            -webkit-transform: rotateY(180deg) translateZ(200px);
+            -moz-transform: rotateY(180deg) translateZ(200px);
+            -ms-transform: rotateY(180deg) translateZ(200px);
+            -o-transform: rotateY(180deg) translateZ(200px);
+            transform: rotateY(180deg) translateZ(200px);
+            outline: 1px solid transparent;
+        }
+        
+        .cube>div:nth-child(5) {
+            -webkit-transform: rotateY(-90deg) translateZ(200px);
+            -moz-transform: rotateY(-90deg) translateZ(200px);
+            -ms-transform: rotateY(-90deg) translateZ(200px);
+            -o-transform: rotateY(-90deg) translateZ(200px);
+            transform: rotateY(-90deg) translateZ(200px);
+            outline: 1px solid transparent;
+        }
+        
+        .cube>div:nth-child(6) {
+            -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            -ms-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            -o-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            outline: 1px solid transparent;
+        }
+        
+        object {
+            opacity: 0.5;
+        }
+        
+        object:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 640px) {
+            .viewport {
+                -webkit-transform: scale(0.6, 0.6);
+                -moz-transform: scale(0.6, 0.6);
+                -ms-transform: scale(0.6, 0.6);
+                -o-transform: scale(0.6, 0.6);
+                transform: scale(0.6, 0.6);
+            }
+            .info-box-01 {
+                display: none;
+            }
+        }
+        
+        .modal {
+            text-align: center;
+            padding: 0!important;
+        }
+        
+        .modal:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
+        
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
+        
+        .modal-content {
+            -webkit-border-radius: 0px !important;
+            -moz-border-radius: 0px !important;
+            border-radius: 0px !important;
+        }
+        
+        .modal .single-course-tabs {
+            margin-bottom: 5px;
+        }
+        
+        .modal .single-course-tabs .tabs__caption li {
+            max-width: 255px;
+        }
+        
+        .tabs li.active a {
+            color: #fff;
+        }
+        
+        .single-course-tabs .tabs__caption li a {
+            margin-right: 15px;
+        }
+        
+        .nav-tabs {
+            margin-bottom: 20px;
+        }
+        
+        .nav-tabs {
+            border-bottom: none;
+        }
+        
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:focus,
+        .nav-tabs>li.active>a:hover {
+            border: none;
+        }
+        
+        #wrapper {
+            background-color: #2d3f51;
+        }
+
+    </style>
+
+</head>
+
+<body class="makings page">
+    <!--[if lt IE 9]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+    <div class="wrapp-content">
+        <!-- Header -->
+        <header class="wrapp-header">
+            <div class="info-box-01">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 text-sm-center">
+                            <div class="contact-block-01 email-02">
+                                <a class="contact-block-01__email email_us" href="#">edidaktikum@tlu.ee</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-md-8 col-lg-8 text-sm-center text-right">
+                            <div class="contact-block-01">
+                                <a class="contact-block-01__email register" href="#">Registreeru</a>
+                                <a class="contact-block-01__email log_in" href="#">Logi sisse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <a href="index.html">
+                                <h3 class="logo">eDidaktikum</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-10 text-center info-nav-wrap">
+                            <div class="main-nav__btn">
+                                <div class="icon-left"></div>
+                                <div class="icon-right"></div>
+                            </div>
+                            <div class="info-box-02__box-01">
+                                <a class="contact-block-01__lang" href="#">Est</a>
+                                <div class="search-block">
+                                    <button class="search-btn">Search</button>
+                                    <form action="./" class="search-block__form">
+                                        <input class="search-block__form-text" type="text" name="search-name" placeholder="Search...">
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <ul class="main-nav__list">
+                                <li>
+                                    <a href="index.html">Avaleht</a>
+
+                                </li>
+                                <li>
+                                    <a href="#">Töölaud</a>
+
+                                </li>
+                                <li>
+                                    <a href="kollektsioonid.html">Kollektsioonid</a>
+
+                                </li>
+                                <li class="active">
+                                    <a href="kuup.html">Koolile</a>
+
+                                </li>
+                                <li>
+                                    <a href="#">Grupid</a>
+
+                                </li>
+                                <li>
+                                    <a href="#">Kontakt</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content-row">
+            <div id="wrapper">
+                <div class="viewport">
+                    <div class="cube">
+                        <div class="side">
+                            <div class="cube-image">
+                                Teooria
+                            </div>
+                        </div>
+                        <div class="side">
+                            <div class="cube-image">Praktika</div>
+                        </div>
+
+                        <div class="side">
+                            <div class="cube-image">
+                                <botton href="#" type="button" data-toggle="modal" data-target="#myModal">Õpilane</botton>
+                            </div>
+                        </div>
+                        <div class="side">
+                            <div class="cube-image">
+                                <botton href="#" type="button" data-toggle="modal" data-target="#myModalteacher">Õpetaja</botton>
+                            </div>
+                        </div>
+                        <div class="side">
+                            <div class="cube-image">Kogemus</div>
+                        </div>
+                        <div class="side">
+                            <div class="cube-image active">
+                                <botton href="#" type="button" data-toggle="modal" data-target="#myModalschool">Kool</botton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="wrapp-footer">
+            <div class="footer-box-01">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <h4 style="color:#fff;">eDidaktikum</h4>
+                            <ul class="widget-contact">
+
+
+                                <li>
+                                    <h4 class="widget-contact__title">Priit Tammets</h4>
+                                    <p class="widget-contact__text">+372 640 9355</p>
+                                </li>
+                                <li>
+                                    <h4 class="widget-contact__title">Email:</h4>
+                                    <p class="widget-contact__text">
+                                        <a class="widget-contact__text-email" href="mailto:edidaktikum@tlu.ee">edidaktikum@tlu.ee</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="widget-link">
+                                <h3 class="widget-title">Töölaud</h3>
+                                <ul class="widget-list">
+                                    <li>
+                                        <a href="#">Minu töölaud</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kutseomistamise portfoolio</a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="#">Ajaveeb</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Minuga jagatud</a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="widget-link">
+                                <h3 class="widget-title">Kollektsioonid</h3>
+                                <ul class="widget-list">
+                                    <li>
+                                        <a href="#">Uusimad</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lisa uus</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Liitu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Leia ja avasta</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="widget-link">
+                                <h3 class="widget-title">Grupid</h3>
+                                <ul class="widget-list">
+                                    <li>
+                                        <a href="#">Minu grupid</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kõik grupid</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Mitteaktiivsed grupid</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Otsi gruppi</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-box-02">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <p class="copy-info">&copy; 2017 eDidaktikum. Kõik õigused kaitstud.</p>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <div class="footer-info">
+                                <a class="footer-info__01" href="#">Minu konto</a>
+                                <a class="footer-info__02" href="#">KKK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="back2top" title="Back to Top">Tagasi üles</a>
+        </footer>
+    </div>
+
+    <!-- JQuery v2.2.4 -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Superfish v1.7.9 -->
+    <script src="js/plugins/jquery.superfish.min.js"></script>
+
+    <!-- Owl carousel v2.2.1 -->
+    <script src="js/plugins/jquery.owl.carousel.min.js"></script>
+
+    <!-- Parallax v1.4.2  -->
+    <script src="js/plugins/jquery.parallax.min.js"></script>
+
+    <!-- Isotope v3.0.4 -->
+    <script src="js/plugins/jquery.isotope.min.js"></script>
+
+    <!-- Pretty photo v3.1.6 -->
+    <script src="js/plugins/jquery.prettyPhoto.min.js"></script>
+
+    <!-- Waypoint v2.0.2 -->
+    <script src="js/plugins/jquery.waypoint.min.js"></script>
+
+    <!-- Typed v2.0.4 -->
+    <script src="js/plugins/jquery.typed.min.js"></script>
+
+    <!-- Match height -->
+    <script src="js/plugins/jquery.matchHeight-min.js"></script>
+
+    <!-- bootstrap -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Main script 
+    <script src="js/main.js"></script> -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script>
+        var events = new Events();
+        events.add = function(obj) {
+            obj.events = {};
+        }
+        events.implement = function(fn) {
+            fn.prototype = Object.create(Events.prototype);
+        }
+
+        function Events() {
+            this.events = {};
+        }
+        Events.prototype.on = function(name, fn) {
+            var events = this.events[name];
+            if (events == undefined) {
+                this.events[name] = [fn];
+                this.emit('event:on', fn);
+            } else {
+                if (events.indexOf(fn) == -1) {
+                    events.push(fn);
+                    this.emit('event:on', fn);
+                }
+            }
+            return this;
+        }
+        Events.prototype.once = function(name, fn) {
+            var events = this.events[name];
+            fn.once = true;
+            if (!events) {
+                this.events[name] = [fn];
+                this.emit('event:once', fn);
+            } else {
+                if (events.indexOf(fn) == -1) {
+                    events.push(fn);
+                    this.emit('event:once', fn);
+                }
+            }
+            return this;
+        }
+        Events.prototype.emit = function(name, args) {
+            var events = this.events[name];
+            if (events) {
+                var i = events.length;
+                while (i--) {
+                    if (events[i]) {
+                        events[i].call(this, args);
+                        if (events[i].once) {
+                            delete events[i];
+                        }
+                    }
+                }
+            }
+            return this;
+        }
+        Events.prototype.unbind = function(name, fn) {
+            if (name) {
+                var events = this.events[name];
+                if (events) {
+                    if (fn) {
+                        var i = events.indexOf(fn);
+                        if (i != -1) {
+                            delete events[i];
+                        }
+                    } else {
+                        delete this.events[name];
+                    }
+                }
+            } else {
+                delete this.events;
+                this.events = {};
+            }
+            return this;
+        }
+
+        var userPrefix;
+
+        var prefix = (function() {
+            var styles = window.getComputedStyle(document.documentElement, ''),
+                pre = (Array.prototype.slice
+                    .call(styles)
+                    .join('')
+                    .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+                )[1],
+                dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
+            userPrefix = {
+                dom: dom,
+                lowercase: pre,
+                css: '-' + pre + '-',
+                js: pre[0].toUpperCase() + pre.substr(1)
+            };
+        })();
+
+        function bindEvent(element, type, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            } else {
+                element.attachEvent('on' + type, handler);
+            }
+        }
+
+        function Viewport(data) {
+            events.add(this);
+
+            var self = this;
+
+            this.element = data.element;
+            this.fps = data.fps;
+            this.sensivity = data.sensivity;
+            this.sensivityFade = data.sensivityFade;
+            this.touchSensivity = data.touchSensivity;
+            this.speed = data.speed;
+
+            this.lastX = 0;
+            this.lastY = 0;
+            this.mouseX = 0;
+            this.mouseY = 0;
+            this.distanceX = 0;
+            this.distanceY = 0;
+            this.positionX = 1122;
+            this.positionY = 136;
+            this.torqueX = 0;
+            this.torqueY = 0;
+
+            this.down = false;
+            this.upsideDown = false;
+
+            this.previousPositionX = 0;
+            this.previousPositionY = 0;
+
+            this.currentSide = 0;
+            this.calculatedSide = 0;
+
+
+            bindEvent(document, 'mousedown', function() {
+                self.down = true;
+            });
+
+            bindEvent(document, 'mouseup', function() {
+                self.down = false;
+            });
+
+            bindEvent(document, 'keyup', function() {
+                self.down = false;
+            });
+
+            bindEvent(document, 'mousemove', function(e) {
+                self.mouseX = e.pageX;
+                self.mouseY = e.pageY;
+            });
+
+            bindEvent(document, 'touchstart', function(e) {
+
+                self.down = true;
+                e.touches ? e = e.touches[0] : null;
+                self.mouseX = e.pageX / self.touchSensivity;
+                self.mouseY = e.pageY / self.touchSensivity;
+                self.lastX = self.mouseX;
+                self.lastY = self.mouseY;
+            });
+
+            bindEvent(document, 'touchmove', function(e) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                }
+
+                if (e.touches.length == 1) {
+
+                    e.touches ? e = e.touches[0] : null;
+
+                    self.mouseX = e.pageX / self.touchSensivity;
+                    self.mouseY = e.pageY / self.touchSensivity;
+
+                }
+            });
+
+            bindEvent(document, 'touchend', function(e) {
+                self.down = false;
+            });
+
+            setInterval(this.animate.bind(this), this.fps);
+
+        }
+        events.implement(Viewport);
+        Viewport.prototype.animate = function() {
+
+            this.distanceX = (this.mouseX - this.lastX);
+            this.distanceY = (this.mouseY - this.lastY);
+
+            this.lastX = this.mouseX;
+            this.lastY = this.mouseY;
+
+            if (this.down) {
+                this.torqueX = this.torqueX * this.sensivityFade + (this.distanceX * this.speed - this.torqueX) * this.sensivity;
+                this.torqueY = this.torqueY * this.sensivityFade + (this.distanceY * this.speed - this.torqueY) * this.sensivity;
+            }
+
+            if (Math.abs(this.torqueX) > 1.0 || Math.abs(this.torqueY) > 1.0) {
+                if (!this.down) {
+                    this.torqueX *= this.sensivityFade;
+                    this.torqueY *= this.sensivityFade;
+                }
+
+                this.positionY -= this.torqueY;
+
+                if (this.positionY > 360) {
+                    this.positionY -= 360;
+                } else if (this.positionY < 0) {
+                    this.positionY += 360;
+                }
+
+                if (this.positionY > 90 && this.positionY < 270) {
+                    this.positionX -= this.torqueX;
+
+                    if (!this.upsideDown) {
+                        this.upsideDown = true;
+                        this.emit('upsideDown', {
+                            upsideDown: this.upsideDown
+                        });
+                    }
+
+                } else {
+
+                    this.positionX += this.torqueX;
+
+                    if (this.upsideDown) {
+                        this.upsideDown = false;
+                        this.emit('upsideDown', {
+                            upsideDown: this.upsideDown
+                        });
+                    }
+                }
+
+                if (this.positionX > 360) {
+                    this.positionX -= 360;
+                } else if (this.positionX < 0) {
+                    this.positionX += 360;
+                }
+
+                if (!(this.positionY >= 46 && this.positionY <= 130) && !(this.positionY >= 220 && this.positionY <= 308)) {
+                    if (this.upsideDown) {
+                        if (this.positionX >= 42 && this.positionX <= 130) {
+                            this.calculatedSide = 3;
+                        } else if (this.positionX >= 131 && this.positionX <= 223) {
+                            this.calculatedSide = 2;
+                        } else if (this.positionX >= 224 && this.positionX <= 314) {
+                            this.calculatedSide = 5;
+                        } else {
+                            this.calculatedSide = 4;
+                        }
+                    } else {
+                        if (this.positionX >= 42 && this.positionX <= 130) {
+                            this.calculatedSide = 5;
+                        } else if (this.positionX >= 131 && this.positionX <= 223) {
+                            this.calculatedSide = 4;
+                        } else if (this.positionX >= 224 && this.positionX <= 314) {
+                            this.calculatedSide = 3;
+                        } else {
+                            this.calculatedSide = 2;
+                        }
+                    }
+                } else {
+                    if (this.positionY >= 46 && this.positionY <= 130) {
+                        this.calculatedSide = 6;
+                    }
+
+                    if (this.positionY >= 220 && this.positionY <= 308) {
+                        this.calculatedSide = 1;
+                    }
+                }
+
+                if (this.calculatedSide !== this.currentSide) {
+                    this.currentSide = this.calculatedSide;
+                    this.emit('sideChange');
+                }
+
+            }
+
+            this.element.style[userPrefix.js + 'Transform'] = 'rotateX(' + this.positionY + 'deg) rotateY(' + this.positionX + 'deg)';
+
+            if (this.positionY != this.previousPositionY || this.positionX != this.previousPositionX) {
+                this.previousPositionY = this.positionY;
+                this.previousPositionX = this.positionX;
+
+                this.emit('rotate');
+
+            }
+
+        }
+        var viewport = new Viewport({
+            element: document.getElementsByClassName('cube')[0],
+            fps: 20,
+            sensivity: .1,
+            sensivityFade: .93,
+            speed: 2,
+            touchSensivity: 1.5
+        });
+
+        function Cube(data) {
+            var self = this;
+
+            this.element = data.element;
+            this.sides = this.element.getElementsByClassName('side');
+
+            this.viewport = data.viewport;
+            this.viewport.on('rotate', function() {
+                self.rotateSides();
+            });
+            this.viewport.on('upsideDown', function(obj) {
+                self.upsideDown(obj);
+            });
+            this.viewport.on('sideChange', function() {
+                self.sideChange();
+            });
+        }
+        Cube.prototype.rotateSides = function() {
+            var viewport = this.viewport;
+            if (viewport.positionY > 90 && viewport.positionY < 270) {
+                this.sides[0].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + (viewport.positionX + viewport.torqueX) + 'deg)';
+                this.sides[5].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + -(viewport.positionX + 180 + viewport.torqueX) + 'deg)';
+            } else {
+                this.sides[0].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + (viewport.positionX - viewport.torqueX) + 'deg)';
+                this.sides[5].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + -(viewport.positionX + 180 - viewport.torqueX) + 'deg)';
+            }
+        }
+        Cube.prototype.upsideDown = function(obj) {
+
+            var deg = (obj.upsideDown == true) ? '180deg' : '0deg';
+            var i = 5;
+
+            while (i > 0 && --i) {
+                this.sides[i].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + deg + ')';
+            }
+
+        }
+        Cube.prototype.sideChange = function() {
+
+            for (var i = 0; i < this.sides.length; ++i) {
+                this.sides[i].getElementsByClassName('cube-image')[0].className = 'cube-image';
+            }
+
+            this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[0].className = 'cube-image active';
+
+        }
+
+        new Cube({
+            viewport: viewport,
+            element: document.getElementsByClassName('cube')[0]
+        });
+
+    </script>
+
+    <script>
+        function setModalMaxHeight(element) {
+            this.$element = $(element);
+            this.$content = this.$element.find('.modal-content');
+            var borderWidth = this.$content.outerHeight() - this.$content.innerHeight();
+            var dialogMargin = $(window).width() < 768 ? 20 : 60;
+            var contentHeight = $(window).height() - (dialogMargin + borderWidth);
+            var headerHeight = this.$element.find('.modal-header').outerHeight() || 0;
+            var footerHeight = this.$element.find('.modal-footer').outerHeight() || 0;
+            var maxHeight = contentHeight - (headerHeight + footerHeight);
+
+            this.$content.css({
+                'overflow': 'hidden'
+            });
+
+            this.$element
+                .find('.modal-body').css({
+                    'max-height': maxHeight,
+                    'overflow-y': 'auto'
+                });
+        }
+
+        $('.modal').on('show.bs.modal', function() {
+            $(this).show();
+            setModalMaxHeight(this);
+        });
+
+        $(window).resize(function() {
+            if ($('.modal.in').length != 0) {
+                setModalMaxHeight($('.modal.in'));
+            }
+        });
+
+    </script>
+
+    <script>
+        $('#myTabs a').click(function(e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+
+    </script>
+
+
+
+    <!-- MODALS -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Õpilane</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+
+                        <!-- Nav tabs -->
+                        <!--<div class="tabs single-course-tabs">-->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <a href="#autonoomia1" aria-controls="autonoomia1" role="tab" data-toggle="tab">
+                                <li role="presentation" class="active">Autonoomia
+                                </li>
+                            </a>
+                            <li role="presentation"><a href="#koostoo1" aria-controls="koostoo1" role="tab" data-toggle="tab">Koostöö</a></li>
+                            <li role="presentation"><a href="#teadmusloome1" aria-controls="teadmusloome1" role="tab" data-toggle="tab">Ühine teadmusloome</a></li>
+                        </ul>
+
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="autonoomia1">
+                                <p> Õpilasi julgustatakse algatama ja antakse võimalus ise projekte, üritusi algatada ning märgata ja lahendada probleeme. Projektis võivad noored ise valida rolli, koostada ajakava, seada eesmärgi, pakkuda välja tegevused ja ka osaleda hindamises eneserefleksiooni kaudu. Õpilastele on oluline ka projektide motiveeriv aspekt eduelamuste pakkumisel ja vastutuse kogemus. Lisaks projekti võimalustele võivad õpilased suuremate kodutööde jaoks ise määrata tähtaja. Nad võivad korraldada koolis üritusi ja kaasa rääkida kooli otsustusprotsessides, näiteks otsustada, kuidas sisustada projektinädalat ja teemapäevi.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="koostoo1">
+                                <p>Tehakse palju rühmatööd ning meeskonnatööd analüüsitakse kui omaette õpieesmärki. Näiteks rühmatöö puhul projektülesande täitmisel teevad õpilased alati ka rühmatöö analüüsi: kes kuidas panustas, mis läks hästi, mis oleks võinud olla paremini, kuidas üksteist kuulati ja üksteisega arvestati või kuidas protsessi juhiti.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="teadmusloome1">
+                                <p>Projektõpe: luuakse seoseid päris eluga (n. raamatupoe külastus ja imiteerimine koolis, kohviku projekt). Elulähedane lõiming: näit. kokandusprojekt Küpsised purgis koostöös kohaliku kutsehariduskeskusega. Heategevusprojektid kogukonna liikme abistamiseks. Näiteks abistati kohalikku ihtüoosihaiget poissi annetuste kogumistega tema raviks. Õpilaste initsiatiivil tehti lasteaialaste emadele emadepäeva kingitus, mis sisaldas laste joonistusi ja mingit emakeeletunnis antud keelelist ülesannet.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModalteacher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Õpetaja</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#autonoomia2" aria-controls="autonoomia2" role="tab" data-toggle="tab">Autonoomia</a></li>
+                            <li role="presentation"><a href="#koostoo2" aria-controls="koostoo2" role="tab" data-toggle="tab">Koostöö</a></li>
+                            <li role="presentation"><a href="#teadmusloome2" aria-controls="teadmusloome2" role="tab" data-toggle="tab">Ühine teadmusloome</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="autonoomia2">
+                                <p>Õpetajad on vabad valima õppematerjale ja tegema õppekava alaseid otsuseid klassiruumi tasandil. Üha rohkem õpetajaid otsustab õpetada ilma õpikuta, kasutades mitmesuguseid alternatiive. Õpetajad ei struktureeri õpilastele antavaid ülesandeid rangelt ette, vaid lubavad õpilastel pakkuda välja erinevaid teid lahenduseni jõudmiseks.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="koostoo2">
+                                <p>Lõimitud õppes õpetavad kaks või enam õpetajat koos, n. emakeel ja geograafia (2 õpetajat) või gümnaasiumis ajalugu, kunstiajalugu, kirjandus ja praktiline emakeel (3 õpetajat korraga tunnis). Näiteks lõimitud geograafia ja emakeele tunnis olid korraga klassis kaks õpetajat, ülesanne oli projektilaadne (leida ja pildistada linnas grafiti, kanda koordinaadid kaardile koos leppemärkidega, koostada esitlus rühmatööst ja teha seda korrektses emakeeles). Õpetajad koostasid koostöös tööülesannetega töölehe, mis sisaldas mõlema aine õpieesmärke ja juhendasid õpilasi, kus vaja. Kuna klassides on palju vene emakeelega õpilasi, siis vajasid nad eesti keeles lisajuhendamist. Vahel jagatakse klass ka rühmadeks, kus erinevad õpetajad on erineva rühma juures eraldi ruumis ja siis vahetatakse kohad.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="teadmusloome2">
+                                <p>Õpetajad kasutavad nn. „lahtiste uste põhimõtet“, kui uks on lahti jäetud, võib iga kolleeg sisse astuda ja tundi vaadelda. Kasutusel on töövarjusüsteem, käiakse teistes koolides ja asutustes õppimas. Näiteks üks ajaloo- ja ühiskonnaõpetaja käis kohtunikule ja kultuuriministrile töövarjuks. </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModalschool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Kool</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#autonoomia3" aria-controls="autonoomia3" role="tab" data-toggle="tab">Autonoomia</a></li>
+                            <li role="presentation"><a href="#koostoo3" aria-controls="koostoo3" role="tab" data-toggle="tab">Koostöö</a></li>
+                            <li role="presentation"><a href="#teadmusloome3" aria-controls="teadmusloome3" role="tab" data-toggle="tab">Ühine teadmusloome</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="autonoomia3">
+                                <p>Kooli autonoomia seisneb eelkõige õppekava kaudu oma väärtuste, temaatiliste rõhuasetuste ja õppetöövormide valikus. Koolis rõhutatakse peamiste väärtustena ettevõtlike ja vastutustundlike noorte kasvatamist. Lõimitud, Eluline, Kaasatud – need on põhilised märksõnad. Õppekava tasandil on loodud võimalused mitme õpetaja koostöös toimuvate lõimitud kursuste loomiseks, keelekümbluseks ja ettevõtlikkusega seotud üldpädevuste saavutamiseks. Lõimitud kursusi on pakutud alates 2013.-2014. õppeaastast. Probleemiks on, kuidas lõimingut õppekavasse kirja panna, milliseid aspekte rõhutada, et see oleks üldiselt arusaadav. Samuti mõeldakse, kuidas lõimitud kursusi hinnata. Hinnatav töö peab hõlmama kõigi lõimitud ainete komponente, aga tunnistusele on vaja hinne panna eraldi ainete eest. Tegelikult oleks hea, kui riik lubaks panna lõimitud õppeaine eest ühe kokkuvõtva hinde.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="koostoo3">
+                                <p>Kooli õppetöö on tihedalt seotud piirkonna asutuste, ettevõtetega (IVEKiga, Kiviõli Seiklusturismi Keskusega, samuti muuseumidega). Kutsutakse külla oma ala eksperte (näiteks teadlasi, kunstnikke) eelkõige Teadlaste Öö festivalil septembris, aga vahel ka muul ajal. Näiteks nn piimakriisi ajal käis külaline rääkimas Eesti põllumajanduse ja piimamajanduse probleemidest ja õpilased pidid end loenguks ette valmistama ajakirjandusest vastavaid artikleid otsides.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="teadmusloome3">
+                                <p>Oma tegevuse analüüsimiseks kogutakse tagasisidet õpilastelt ja lapsevanematelt. Kasutatakse 360° kraadi metoodikat, kus õpetaja saab tagasisidet õpilastelt ja lapsevanematelt. Algselt sai tagasisidet ainult kursuse lõpuks, aga nüüd tahetakse ka kursuse keskel koguda tagasisidet. Siiani on tagasisidet kogutud struktureeritud küsimustike kaudu, kuid see ei andnud piisavalt infot lapsevanemate arvamuste põhjuste kohta. Tulevikus plaanitakse küsida rohkem avatud küsimusi, et lapsevanemad tooksid näiteid, mida nad koolilt ootavad või mida annaks paremini teha. Toimuvad aasta kokkuvõtete tegemine, arenguvestlused õpetajatega. Tagasisidet analüüsitakse ja planeeritud tegevustes tehakse vastavalt tagasisidele korrektuure. Näiteks katsetatakse päeva keskel tunniajast liikumisvahetundi, mis võimaldaks õpetajatel koostööd teha ja vaadatakse tagasiside põhjal, kas see õigustas end. Osaletakse ettevõtlike koolide enesehindamissüsteemis: pronks-, hõbe- ja kuldstandard. Hetkel püüdleb kool kuldstandardi poole. Omamoodi tagasiside on ka 2016. aastal saadud „Junior Achievement“ autasu. Algul tehti see viga, et ei pandud kõike kirja, mida tehti. Hiljem oli väga raske meenutada, mida aasta jooksul tehti. Nüüd pannakse hoolsamalt kõiki üritusi ja tegevusi kirja, et saaks tagantjärele tööd paremini analüüsida.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- MODALS END-->
+
+
+
+</body>
+
+</html>
