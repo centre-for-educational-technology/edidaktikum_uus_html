@@ -622,27 +622,27 @@ ol li::before {
 }
 
 .main-nav__btn:hover .icon-left {
-    background-color: #a7ce4e;
+    background-color: #1abc9c;
 }
 
 .main-nav__btn:hover .icon-left::before {
-    background-color: #a7ce4e;
+    background-color: #1abc9c;
 }
 
 .main-nav__btn:hover .icon-left::after {
-    background-color: #a7ce4e;
+    background-color: #1abc9c;
 }
 
 .main-nav__btn:hover .icon-right {
-    background-color: #a7ce4e;
+    background-color: #1abc9c;
 }
 
 .main-nav__btn:hover .icon-right::before {
-    background-color: #a7ce4e;
+    background-color: #1abc9c;
 }
 
 .main-nav__btn:hover .icon-right::after {
-    background-color: #a7ce4e;
+    background-color: #1abc9c;
 }
 
 .main-nav__btn .icon-left {
@@ -2060,7 +2060,7 @@ ol li::before {
 }
 
 .owl-option-02__box-01:hover {
-    background-color: #a7ce4e;
+    background-color: #1abc9c;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
 }

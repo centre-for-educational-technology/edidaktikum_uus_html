@@ -265,7 +265,6 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
 
 /*01 header*/
 
-
 /*/=== Home page type 1 ===/*/
 
 .home-02 .wrapp-header {
@@ -322,15 +321,15 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
     padding-top: 25px;
 }
 
-.home-02 .main-nav__list>li>a {
+.home-02 .main-nav__list > li > a {
     color: #fff;
 }
 
-.home-02 .main-nav__list>li>a:hover {
+.home-02 .main-nav__list > li > a:hover {
     color: #1abc9c;
 }
 
-.home-02 .main-nav__list>li.active>a {
+.home-02 .main-nav__list > li.active > a {
     color: #1abc9c;
 }
 
@@ -394,6 +393,66 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
     background-size: cover;
 }
 
+/*v6 video page*/
+
+.video-landing .news-box-01 {
+    margin-bottom: 40px;
+}
+
+.video-post {
+    padding-bottom: 50px;
+}
+
+.blog-listing-video-sidebar .widget-title {
+    font-size: 30px;
+    line-height: 32px;
+    color: #303638;
+    font-weight: 600;
+    margin: 0 0 32px;
+}
+
+body.video .related-posts__data {
+    padding-top: 0;
+}
+
+.ed-node-statistics i {
+    padding-right: 5px;
+}
+
+.ed-node-statistics .fa-heart {
+    color: #fe3f4c;
+}
+
+.single-related-posts__btn {
+
+    color: #1abc9c;
+}
+
+body.video .related-posts__img img {
+    max-width: 100%;
+    padding-bottom: 15px;
+    opacity: .5;
+    transition: all .5s;
+}
+
+body.video .related-posts__img img:hover {
+    opacity: 1;
+    transition: all .5s;
+}
+
+
+body.video .related-posts__title {
+    padding-bottom: 8px;
+}
+
+hr.separator {
+    margin-bottom: 15px;
+    border-top: none;
+    margin-top: 0;
+}
+
+/*v6 video page*/
+
 @media only screen and (max-width: 767px) {
     .home-02 .main-nav__list {
         padding-top: 0;
@@ -408,3 +467,18 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
         height: auto !important;
     }
 }
+
+/*v6*/
+
+@media only screen and (max-width: 767px) {
+    .contact-block-01 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .main-nav__btn {
+        margin-top: 0px;
+    }
+
+}
+
+/*v6*/
