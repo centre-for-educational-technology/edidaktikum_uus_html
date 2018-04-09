@@ -3217,7 +3217,7 @@ ol li::before {
 }
 
 .search-bg__btn:hover {
-    background-color: #7fa538;
+    background-color: #1abc9c;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
 }
@@ -5171,13 +5171,13 @@ ol li::before {
 }
 
 .single-related-posts__title a:hover {
-    color: #7fa538;
+    color: #1abc9c;
 }
 
 .single-related-posts__btn {
     font-size: 14px;
     line-height: 16px;
-    color: #7fa538;
+    color: #1abc9c;
 }
 
 .single-related-posts__btn::after {
@@ -5402,7 +5402,7 @@ ol li::before {
 }
 
 .single-team__info-list li a:hover {
-    color: #7fa538;
+    color: #1abc9c;
 }
 
 .single-team__info-list li:last-child {
@@ -6603,7 +6603,7 @@ ol li::before {
 }
 
 .news-item__btn:hover {
-    color: #7fa538;
+    color: #1abc9c;
 }
 
 .news-info {
@@ -6689,7 +6689,7 @@ ol li::before {
 }
 
 .news-info__btn:hover {
-    color: #7fa538;
+    color: #1abc9c;
 }
 
 

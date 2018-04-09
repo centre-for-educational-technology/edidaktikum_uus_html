@@ -451,7 +451,41 @@ hr.separator {
     margin-top: 0;
 }
 
-/*v6 video page*/
+.process-text-01 {
+    max-width: 980px;
+}
+
+body.video-landing .breadcrumbs {
+    margin: 0 0 25px;
+}
+
+/*.single-related-posts__list li {
+    max-width: inherit;
+}*/
+
+body.video .hr-01 {
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+body.video .page-title-02 {
+    text-align: center;
+}
+
+body.video-extra h3.title-02 {
+    font-size: 24px;
+}
+
+body.video p {
+    color: #333;
+    font-weight: 300;
+}
+
+.ul-list-01 li {
+    color: #333;
+}
+
+/*v6 video page end*/
 
 @media only screen and (max-width: 767px) {
     .home-02 .main-nav__list {
