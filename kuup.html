@@ -20,248 +20,17 @@
     <!-- Main style -->
     <link rel="stylesheet" href="css/style.css">
 
-
     <!-- Custom style -->
     <link rel="stylesheet" href="css/custom.css">
-    <style>
-        *,
-        *:before,
-        *:after {
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        
-        #wrapper {
-            padding-top: 5%;
-            padding-bottom: 40px;
-        }
-        
-        .viewport {
-            -webkit-perspective: 800px;
-            -moz-perspective: 800px;
-            -ms-perspective: 800px;
-            -o-perspective: 800px;
-            perspective: 800px;
-            -webkit-perspective-origin: 50% 400px;
-            -moz-perspective-origin: 50% 400px;
-            -ms-perspective-origin: 50% 400px;
-            -o-perspective-origin: 50% 400px;
-            perspective-origin: 50% 400px;
-            -webkit-transform: scale(0.8, 0.8);
-            -moz-transform: scale(0.8, 0.8);
-            -ms-transform: scale(0.8, 0.8);
-            -o-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-            -webkit-box-reflect: below 100px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, 0.1)));
-        }
-        
-        .cube {
-            position: relative;
-            margin: 0 auto;
-            height: 400px;
-            width: 400px;
-            -webkit-transform-style: preserve-3d;
-            -moz-transform-style: preserve-3d;
-            -ms-transform-style: preserve-3d;
-            -o-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-            -webkit-transform: rotateX(136deg) rotateY(1122deg);
-            -moz-transform: rotateX(136deg) rotateY(1122deg);
-            -ms-transform: rotateX(136deg) rotateY(1122deg);
-            -o-transform: rotateX(136deg) rotateY(1122deg);
-            transform: rotateX(136deg) rotateY(1122deg);
-        }
-        
-        .cube>div {
-            overflow: hidden;
-            position: absolute;
-            opacity: .93;
-            height: 400px;
-            width: 400px;
-            background-image: url("img/cube.png");
-            -webkit-touch-callout: none;
-            -moz-touch-callout: none;
-            -ms-touch-callout: none;
-            -o-touch-callout: none;
-            touch-callout: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -o-user-select: none;
-            user-select: none;
-        }
-        
-        .cube>div>div.cube-image {
-            width: 400px;
-            height: 400px;
-            -webkit-transform: rotate(180deg);
-            -moz-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-            -o-transform: rotate(180deg);
-            transform: rotate(180deg);
-            line-height: 400px;
-            font-size: 60px;
-            text-align: center;
-            color: #303638;
-            -webkit-transition: color 600ms;
-            -moz-transition: color 600ms;
-            -ms-transition: color 600ms;
-            -o-transition: color 600ms;
-            transition: color 600ms;
-        }
-        
-        .cube>div>div.cube-image.active {
-            color: #1abc9c;
-        }
-        
-        .cube>div:hover {
-            cursor: pointer;
-        }
-        
-        .cube>div:active {
-            cursor: pointer;
-        }
-        
-        .cube>div:first-child {
-            -webkit-transform: rotateX(90deg) translateZ(200px);
-            -moz-transform: rotateX(90deg) translateZ(200px);
-            -ms-transform: rotateX(90deg) translateZ(200px);
-            -o-transform: rotateX(90deg) translateZ(200px);
-            transform: rotateX(90deg) translateZ(200px);
-            outline: 1px solid transparent;
-        }
-        
-        .cube>div:nth-child(2) {
-            -webkit-transform: translateZ(200px);
-            -moz-transform: translateZ(200px);
-            -ms-transform: translateZ(200px);
-            -o-transform: translateZ(200px);
-            transform: translateZ(200px);
-            outline: 1px solid transparent;
-        }
-        
-        .cube>div:nth-child(3) {
-            -webkit-transform: rotateY(90deg) translateZ(200px);
-            -moz-transform: rotateY(90deg) translateZ(200px);
-            -ms-transform: rotateY(90deg) translateZ(200px);
-            -o-transform: rotateY(90deg) translateZ(200px);
-            transform: rotateY(90deg) translateZ(200px);
-            outline: 1px solid transparent;
-        }
-        
-        .cube>div:nth-child(4) {
-            -webkit-transform: rotateY(180deg) translateZ(200px);
-            -moz-transform: rotateY(180deg) translateZ(200px);
-            -ms-transform: rotateY(180deg) translateZ(200px);
-            -o-transform: rotateY(180deg) translateZ(200px);
-            transform: rotateY(180deg) translateZ(200px);
-            outline: 1px solid transparent;
-        }
-        
-        .cube>div:nth-child(5) {
-            -webkit-transform: rotateY(-90deg) translateZ(200px);
-            -moz-transform: rotateY(-90deg) translateZ(200px);
-            -ms-transform: rotateY(-90deg) translateZ(200px);
-            -o-transform: rotateY(-90deg) translateZ(200px);
-            transform: rotateY(-90deg) translateZ(200px);
-            outline: 1px solid transparent;
-        }
-        
-        .cube>div:nth-child(6) {
-            -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
-            -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
-            -ms-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
-            -o-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
-            transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
-            outline: 1px solid transparent;
-        }
-        
-        object {
-            opacity: 0.5;
-        }
-        
-        object:hover {
-            opacity: 1;
-        }
-        
-        @media (max-width: 640px) {
-            .viewport {
-                -webkit-transform: scale(0.6, 0.6);
-                -moz-transform: scale(0.6, 0.6);
-                -ms-transform: scale(0.6, 0.6);
-                -o-transform: scale(0.6, 0.6);
-                transform: scale(0.6, 0.6);
-            }
-            .info-box-01 {
-                display: none;
-            }
-        }
-        
-        .modal {
-            text-align: center;
-            padding: 0!important;
-        }
-        
-        .modal:before {
-            content: '';
-            display: inline-block;
-            height: 100%;
-            vertical-align: middle;
-            margin-right: -4px;
-        }
-        
-        .modal-dialog {
-            display: inline-block;
-            text-align: left;
-            vertical-align: middle;
-        }
-        
-        .modal-content {
-            -webkit-border-radius: 0px !important;
-            -moz-border-radius: 0px !important;
-            border-radius: 0px !important;
-        }
-        
-        .modal .single-course-tabs {
-            margin-bottom: 5px;
-        }
-        
-        .modal .single-course-tabs .tabs__caption li {
-            max-width: 255px;
-        }
-        
-        .tabs li.active a {
-            color: #fff;
-        }
-        
-        .single-course-tabs .tabs__caption li a {
-            margin-right: 15px;
-        }
-        
-        .nav-tabs {
-            margin-bottom: 20px;
-        }
-        
-        .nav-tabs {
-            border-bottom: none;
-        }
-        
-        .nav-tabs>li.active>a,
-        .nav-tabs>li.active>a:focus,
-        .nav-tabs>li.active>a:hover {
-            border: none;
-        }
-        
-        #wrapper {
-            background-color: #2d3f51;
-        }
+    <!-- timeline -->
 
-    </style>
+    <link rel="stylesheet" href="css/timeline.css">
+
+
 
 </head>
 
-<body class="makings page">
+<body class="makings page school">
     <!--[if lt IE 9]>
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -342,42 +111,366 @@
         </header>
 
         <!-- Content -->
-        <main class="content-row">
-            <div id="wrapper">
-                <div class="viewport">
-                    <div class="cube">
-                        <div class="side">
-                            <div class="cube-image">
-                                Teooria
-                            </div>
-                        </div>
-                        <div class="side">
-                            <div class="cube-image">Praktika</div>
-                        </div>
 
-                        <div class="side">
-                            <div class="cube-image">
-                                <botton href="#" type="button" data-toggle="modal" data-target="#myModal">Õpilane</botton>
-                            </div>
-                        </div>
-                        <div class="side">
-                            <div class="cube-image">
-                                <botton href="#" type="button" data-toggle="modal" data-target="#myModalteacher">Õpetaja</botton>
-                            </div>
-                        </div>
-                        <div class="side">
-                            <div class="cube-image">Kogemus</div>
-                        </div>
-                        <div class="side">
-                            <div class="cube-image active">
-                                <botton href="#" type="button" data-toggle="modal" data-target="#myModalschool">Kool</botton>
+        <main class="content-row">
+
+            <div class="parallax parallax_01" data-type="background" data-speed="10" style="background-image: url(img/kool_bg.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="parallax-content-01">
+                                <h3 class="parallax-title">
+                                    <span>Praktilised</span> näited Eesti koolidest</h3>
+                                <div class="parallax-text">
+                                    <p>Eesti haridussüsteemis on palju häid näiteid nii õppeprotsessi, koolielu korraldamise kui koolijuhtimise kohta. Õpikäsituse muutusi on lihtsam saavutada, kui näeme, kuidas muutused töötavad juba mõnes koolis. </p>
+                                </div>
+                                <a href="#read-more" class="btn-01">Loe edasi</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="content-box-01 nav-pill-custom">
+                <div class="container">
+                    <ul class="nav nav-pills">
+                        <li><a href="#nav-link-01" class="nav-link-01">1. Muutuste suund</a></li>
+                        <li><a href="#nav-link-02" class="nav-link-02">2. Muutuste protsess</a></li>
+                        <li><a href="#nav-link-03" class="nav-link-03">3. Muutuste jätkusuutlikkus</a></li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="content-box-01 padding-top-50 padding-bottom-40" id="read-more">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!--<h3 class="title-02 title-02--mr-02"><span></span></h3>-->
+                            <p class="subtitle-02 subtitle-02--mr-01">Eesti haridussüsteemis on palju häid näiteid nii õppeprotsessi, koolielu korraldamise kui koolijuhtimise kohta. Õpikäsituse muutusi on lihtsam saavutada, kui näeme, kuidas muutused töötavad juba mõnes koolis. Praktikult– praktikule õppimist toetavad ülikoolide õppejõudude analüüsid ja selgitused, miks üht või teist lahendust tasub usaldada. Lisatud on allikaid lisalugemiseks, et muutusi kavandavad koolijuhid-õpetajad saaksid tutvuda nii praktikatega kui ka selgitusega, miks antud lähenemine/lahendus on kasulik õpilase arengule.</p>
+
+                            <p class="subtitle-02 subtitle-02--mr-01">Järgnevad näited põhinevad alates 2017. aastast Tallinna Ülikooli teadlaste poolt läbiviidud koolikülastustel ja intervjuudel koolijuhtide ning õpetajatega. Iga näite kirjeldamise aluseks on kolm innovatsiooni aspekti: muutuste suund, muutuste protsess ja jätkusuutlikkus, kusjuures on toodud konkreetseid näiteid, mida need muutused tähendavad õppija, õpetaja ja kooli vaates.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-box-02" id="nav-link-01">
+                <div class="row">
+                    <div class="container">
+                        <div class="col-sm-6 content-box-sc-01">
+                            <h3 class="title-02">1. Muutuste suund
+                                <span></span>
+                            </h3>
+                            <p class="subtitle-02">Põhieesmärk on teada saada:</p>
+                            <ol>
+                                <li> kuidas muutus on toetanud õppija, õpetaja ja n ka kooli autonoomiat (kui viimane on teemaks), täpsustavad näited, antud tabelis on ka toodud vaid võimalikke näiteid;
+                                </li>
+                                <li>kuidas muutus on toetanud koostööd - õpilaste, õpetajate ja koolide vahel, näited;
+                                </li>
+                                <li>kuidas muutus loob võimalusi oma tegevuse/õppimise mõtestamiseks ja analüüsimiseks, näited.
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-sm-6">
+                            <!--<div class="bg-img-sc-01"></div>-->
+
+                            <img class="about-img bg-img-sc-01" src="img/blog/blog-03.jpg" alt="">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--  <div class="content-box-02" id="nav-link-01">
+                <div class="table-03">
+                    <div class="table-03__row">
+
+                        <div class="table-03__box-01">
+                        </div>
+                        <div class="table-03__box-02">
+                            <div class="table-03__content">
+                                <h3 class="title-02">1. Muutuste suund
+                                    <span></span>
+                                </h3>
+                                <p class="subtitle-02">Põhieesmärk on teada saada:</p>
+                                <ol>
+                                    <li> kuidas muutus on toetanud õppija, õpetaja ja n ka kooli autonoomiat (kui viimane on teemaks), täpsustavad näited, antud tabelis on ka toodud vaid võimalikke näiteid;
+                                    </li>
+                                    <li>kuidas muutus on toetanud koostööd - õpilaste, õpetajate ja koolide vahel, näited;
+                                    </li>
+                                    <li>kuidas muutus loob võimalusi oma tegevuse/õppimise mõtestamiseks ja analüüsimiseks, näited.
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="content-box-01 padding-top-50 padding-bottom-70">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <h3 class="title-02 title-02--mr-02">
+                                <span>Autonoomia</span>
+                            </h3>
+                            <p class="subtitle-02 subtitle-02--mr-01">Liikumine väliselt kontrollilt autonoomiat toetava tegevusmudeli suunas</p>
+                            <div class="tabs offer-tabs">
+                                <ul class="tabs__caption">
+                                    <li class="active">Õpilane</li>
+                                    <li>Õpetaja</li>
+                                    <li>Kool</li>
+                                </ul>
+                                <div class="tabs__content active">
+                                    <p>Sihiks on toetada õppuri iseseisvust, enesekindlust, vastutustunnet, riskijulgust, loomingulisust, ettevõtlikkust, eneseregulatsiooni võimekust.
+                                    </p>
+                                    <p>Tegevused – autonoomiat toetav õpetamine, ennastjuhtiv õppimine, valikute pakkumine ja vastutuse delegeerimine õppijale, individuaalne tagasiside ja õppija enesehindamine...</p>
+
+                                </div>
+                                <div class="tabs__content">
+                                    <p>Sihiks anda õpetajale rohkem otsustusõigust ja võimalusi katsetamiseks, toetada õpetaja oma õpetamisstiili väljakujundamist. Õpetajatel on juhtkonna tugi, oskused ja vahendid, et viia läbi metoodiliselt mitmekesist õppetööd, arendada õppekava, algatada ja läbi viia projekte, valida sisulisi rõhuasetusi, õppematerjale ja otsustada distsipliiniküsimuste ning hindamispõhimõtete üle. Õpetajad on kaasatud kooli juhtimisse.
+                                    </p>
+
+                                </div>
+                                <div class="tabs__content">
+                                    <p>Sihiks iga kooli unikaalse koolikultuuri väljakujundamine.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <h3 class="title-02 title-02--mr-02">
+                                <span>Koostöö</span>
+                            </h3>
+                            <p class="subtitle-02 subtitle-02--mr-01">Liikumine individuaalsest tegutsemisest koostöise tegevus- ja suhtemustri suunas</p>
+                            <div class="tabs offer-tabs">
+                                <ul class="tabs__caption">
+                                    <li class="active">Õpilane</li>
+                                    <li>Õpetaja</li>
+                                    <li>Kool</li>
+                                </ul>
+                                <div class="tabs__content active">
+                                    <p>Sihiks toetada õppuri sotsiaalsete oskuste arengut – eneseväljendus, suhtlemine, tiimitöö, eestvedamine, konfliktide lahendamine.</p>
+
+                                </div>
+                                <div class="tabs__content">
+                                    <p>Sihiks võtta kasutusele õpetajate koostöös peituvad ressursid
+                                    </p>
+
+                                </div>
+                                <div class="tabs__content">
+                                    <p>Sihiks õppimisalase eestvedamise juurdumine koolis, koostöise koolikultuuri kujundamine</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box-01 padding-top-50 padding-lg-top-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <h3 class="title-02 title-02--mr-02">
+                                <span>Mõtestatud õppimine</span>
+                            </h3>
+                            <p class="subtitle-02 subtitle-02--mr-01">Liikumine teadmist aktiivselt loova ja lõimiva ning tõenduspõhise lähenemise suunas</p>
+                            <div class="tabs offer-tabs">
+                                <ul class="tabs__caption">
+                                    <li class="active">Õpilane</li>
+                                    <li>Õpetaja</li>
+                                    <li>Kool</li>
+                                </ul>
+                                <div class="tabs__content active">
+                                    <p>Sihiks toetada tervikliku (aineülese) maailmapildi kujunemist, toetada tõenduspõhist argumenteerimisoskust ja kriitilist mõtlemist.
+                                    </p>
+
+                                </div>
+                                <div class="tabs__content">
+                                    <p>Sihiks toetada õpetajate tõenduspõhiste praktikate rakendamist, lõimivate metoodikate ja lahenduste väljatöötamist.
+
+                                    </p>
+
+                                </div>
+                                <div class="tabs__content">
+                                    <p>Sihiks arendada koolis tõenduspõhist otsustamis- ja tegevuskultuuri.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <img class="about-img" src="img/blog/school-c.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box-02 padding-top-50 padding-bottom-70 timeline-wrp" id="nav-link-02">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="title-02 title-02--mr-02 text-center">2. Muutuste
+                                <span>protsess</span></h3>
+                            <p>
+                                Muutuste protsessi näitlikustades püüame juhtida tähelepanu sellele, et koolikultuuri parendamine on protsess, mis läbib kõiki organisatsiooni tegevuse tasandeid, alates juhtimisest ja lõpetades muutustega füüsilises keskkonnas. Seega ei saa loota, et muutused jõuaksid süvatasandile, kui piirdutakse vaid ühe aspekti arendamisega.
+                            </p>
+                            <p class="lead text-center">Õppija areng ja õppimine</p>
+                            <ul class="timeline">
+                                <li>
+                                    <div class="timeline-badge info"><i class="fa fa-book" aria-hidden="true"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">1. Muutused õppe sisus ja õpikäsituses</h4>
+                                        </div>
+                                        <!--<div class="timeline-body">
+                                        </div>-->
+                                    </div>
+                                </li>
+                                <li class="timeline-badge timeline-inverted">
+                                    <div class="timeline-badge info"><i class="fa fa-users" aria-hidden="true"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">2. Muutused õpetajate töös</h4>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-badge info"><i class="fa fa-sitemap" aria-hidden="true"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">3. Muutused õppekorralduses</h4>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="timeline-badge timeline-inverted">
+                                    <div class="timeline-badge info"><i class="fa fa-child" aria-hidden="true"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">4. Muutused kooli füüsilises keskkonnas</h4>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-badge info"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">5. Muutused koolijuhtimises, hindamises</h4>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box-01 padding-top-50 padding-bottom-70 timeline-vertical-wrp" id="nav-link-03">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="title-02 title-02--mr-02 text-center">3. Muutuste
+                                <span>jätkusuutlikkus</span></h3>
+                            <p class="lead">
+                                Hinnatakse muutuse sisseviimise nö astet, kuivõrd kaugele on muutuse rakendamisega jõutud.
+                            </p>
+
+                            <ul class="timeline-2">
+                                <li>
+                                    <div class="timeline-image" id="timeline-01">
+                                        <img class="img-circle img-responsive" src="img/timeline-img-02a.jpg" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="title-02">1. Algne ja kaootiline</h4>
+                                            <h4 class="subheading">episoodiline kasutamine</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">
+                                                Uuenduslikke õpetamispraktikaid (n uurimuslik õpe, projektõpe, lõimitud õpe) kasutatakse üksikutel juhtudel mõnede õpetajate poolt.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-image" id="timeline-02">
+                                        <img class="img-circle img-responsive" src="img/timeline-img-01b.jpg" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="title-02">2. Esmased rutiinid</h4>
+                                            <h4 class="subheading">koolisisene koordineerimine</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">
+                                                Uusi lähenemisi ja õpiviise katsetatakse juhtkonna poolt juhitult, toimub kogemuste vahetus õpetajate vahel. Muudatused kajastuvad kooli õppekavas. Toimuvad arutelud ja koolitused uute praktikate juurutamiseks.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                </li>
+                                <li>
+                                    <div class="timeline-image" id="timeline-03">
+                                        <img class="img-circle img-responsive" src="img/timeline-img-03.jpg" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="title-02">3. Pidev täiustamine</h4>
+                                            <h4 class="subheading">õppeprotsessi muutmine</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">
+                                                Kooli tasandil tehakse süsteemseid muutusi õppekorralduses, lähtudes ühtsest tõenduspõhisest analüüsist. Kooli tasandil on kokku lepitud uutes nõuetes õppekavadele ja neis kirjeldatud õpieesmärkidele, õpitulemustele ja hindamisviisidele.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-image" id="timeline-04">
+                                        <img class="img-circle img-responsive" src="img/timeline-img-04.jpg" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="title-02">4. Süsteemne rakendamine</h4>
+                                            <h4 class="subheading">läbiv muutus</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">
+                                                Omavahel lõimitud tegevused muutuvad märkamatuks ja kõikjale ulatuvaks süsteemseks osaks töö- ja õpikeskkonnas. Kooli juhtimises ja toimimisprotsessides on kinnistunud struktuursed muutused. Enamik kooli õpetajaid rakendavad kokkulepitud muutust.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                </li>
+                                <li>
+                                    <div class="timeline-image" id="timeline-05">
+                                        <img class="img-circle img-responsive" src="img/timeline-img-05.jpg" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="title-02">5. Võimendamine ja eestvedamine</h4>
+                                            <h4 class="subheading">ümbermõtestamine ja innovatsiooni juhtimine</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">
+                                                Kooli uudsed praktikad laienevad koolist väljapoole. Kool on muutunud eestvedajaks mõne konkreetse uuendusliku õpetamispraktika osas kas oma regiooni või riigi tasandil, korraldades antud valdkonna konverentse, koolitusi ja juhtides arendusprojekte.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer -->
@@ -502,6 +595,8 @@
     <!-- Owl carousel v2.2.1 -->
     <script src="js/plugins/jquery.owl.carousel.min.js"></script>
 
+    <!-- Nivo slider v3.2 -->
+    <script src="js/plugins/jquery.nivo.min.js"></script>
     <!-- Parallax v1.4.2  -->
     <script src="js/plugins/jquery.parallax.min.js"></script>
 
@@ -520,540 +615,42 @@
     <!-- Match height -->
     <script src="js/plugins/jquery.matchHeight-min.js"></script>
 
-    <!-- bootstrap -->
+    <!-- Main script -->
+    <script src="js/main.js"></script>
 
-    <script src="js/bootstrap.min.js"></script>
 
-    <!-- Main script 
-    <script src="js/main.js"></script> -->
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script>
-        var events = new Events();
-        events.add = function(obj) {
-            obj.events = {};
-        }
-        events.implement = function(fn) {
-            fn.prototype = Object.create(Events.prototype);
-        }
-
-        function Events() {
-            this.events = {};
-        }
-        Events.prototype.on = function(name, fn) {
-            var events = this.events[name];
-            if (events == undefined) {
-                this.events[name] = [fn];
-                this.emit('event:on', fn);
-            } else {
-                if (events.indexOf(fn) == -1) {
-                    events.push(fn);
-                    this.emit('event:on', fn);
-                }
-            }
-            return this;
-        }
-        Events.prototype.once = function(name, fn) {
-            var events = this.events[name];
-            fn.once = true;
-            if (!events) {
-                this.events[name] = [fn];
-                this.emit('event:once', fn);
-            } else {
-                if (events.indexOf(fn) == -1) {
-                    events.push(fn);
-                    this.emit('event:once', fn);
-                }
-            }
-            return this;
-        }
-        Events.prototype.emit = function(name, args) {
-            var events = this.events[name];
-            if (events) {
-                var i = events.length;
-                while (i--) {
-                    if (events[i]) {
-                        events[i].call(this, args);
-                        if (events[i].once) {
-                            delete events[i];
-                        }
-                    }
-                }
-            }
-            return this;
-        }
-        Events.prototype.unbind = function(name, fn) {
-            if (name) {
-                var events = this.events[name];
-                if (events) {
-                    if (fn) {
-                        var i = events.indexOf(fn);
-                        if (i != -1) {
-                            delete events[i];
-                        }
-                    } else {
-                        delete this.events[name];
-                    }
-                }
-            } else {
-                delete this.events;
-                this.events = {};
-            }
-            return this;
-        }
-
-        var userPrefix;
-
-        var prefix = (function() {
-            var styles = window.getComputedStyle(document.documentElement, ''),
-                pre = (Array.prototype.slice
-                    .call(styles)
-                    .join('')
-                    .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-                )[1],
-                dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
-            userPrefix = {
-                dom: dom,
-                lowercase: pre,
-                css: '-' + pre + '-',
-                js: pre[0].toUpperCase() + pre.substr(1)
-            };
-        })();
-
-        function bindEvent(element, type, handler) {
-            if (element.addEventListener) {
-                element.addEventListener(type, handler, false);
-            } else {
-                element.attachEvent('on' + type, handler);
-            }
-        }
-
-        function Viewport(data) {
-            events.add(this);
-
-            var self = this;
-
-            this.element = data.element;
-            this.fps = data.fps;
-            this.sensivity = data.sensivity;
-            this.sensivityFade = data.sensivityFade;
-            this.touchSensivity = data.touchSensivity;
-            this.speed = data.speed;
-
-            this.lastX = 0;
-            this.lastY = 0;
-            this.mouseX = 0;
-            this.mouseY = 0;
-            this.distanceX = 0;
-            this.distanceY = 0;
-            this.positionX = 1122;
-            this.positionY = 136;
-            this.torqueX = 0;
-            this.torqueY = 0;
-
-            this.down = false;
-            this.upsideDown = false;
-
-            this.previousPositionX = 0;
-            this.previousPositionY = 0;
-
-            this.currentSide = 0;
-            this.calculatedSide = 0;
-
-
-            bindEvent(document, 'mousedown', function() {
-                self.down = true;
-            });
-
-            bindEvent(document, 'mouseup', function() {
-                self.down = false;
-            });
-
-            bindEvent(document, 'keyup', function() {
-                self.down = false;
-            });
-
-            bindEvent(document, 'mousemove', function(e) {
-                self.mouseX = e.pageX;
-                self.mouseY = e.pageY;
-            });
-
-            bindEvent(document, 'touchstart', function(e) {
-
-                self.down = true;
-                e.touches ? e = e.touches[0] : null;
-                self.mouseX = e.pageX / self.touchSensivity;
-                self.mouseY = e.pageY / self.touchSensivity;
-                self.lastX = self.mouseX;
-                self.lastY = self.mouseY;
-            });
-
-            bindEvent(document, 'touchmove', function(e) {
-                if (e.preventDefault) {
-                    e.preventDefault();
-                }
-
-                if (e.touches.length == 1) {
-
-                    e.touches ? e = e.touches[0] : null;
-
-                    self.mouseX = e.pageX / self.touchSensivity;
-                    self.mouseY = e.pageY / self.touchSensivity;
-
-                }
-            });
-
-            bindEvent(document, 'touchend', function(e) {
-                self.down = false;
-            });
-
-            setInterval(this.animate.bind(this), this.fps);
-
-        }
-        events.implement(Viewport);
-        Viewport.prototype.animate = function() {
-
-            this.distanceX = (this.mouseX - this.lastX);
-            this.distanceY = (this.mouseY - this.lastY);
-
-            this.lastX = this.mouseX;
-            this.lastY = this.mouseY;
-
-            if (this.down) {
-                this.torqueX = this.torqueX * this.sensivityFade + (this.distanceX * this.speed - this.torqueX) * this.sensivity;
-                this.torqueY = this.torqueY * this.sensivityFade + (this.distanceY * this.speed - this.torqueY) * this.sensivity;
-            }
-
-            if (Math.abs(this.torqueX) > 1.0 || Math.abs(this.torqueY) > 1.0) {
-                if (!this.down) {
-                    this.torqueX *= this.sensivityFade;
-                    this.torqueY *= this.sensivityFade;
-                }
-
-                this.positionY -= this.torqueY;
-
-                if (this.positionY > 360) {
-                    this.positionY -= 360;
-                } else if (this.positionY < 0) {
-                    this.positionY += 360;
-                }
-
-                if (this.positionY > 90 && this.positionY < 270) {
-                    this.positionX -= this.torqueX;
-
-                    if (!this.upsideDown) {
-                        this.upsideDown = true;
-                        this.emit('upsideDown', {
-                            upsideDown: this.upsideDown
-                        });
-                    }
-
-                } else {
-
-                    this.positionX += this.torqueX;
-
-                    if (this.upsideDown) {
-                        this.upsideDown = false;
-                        this.emit('upsideDown', {
-                            upsideDown: this.upsideDown
-                        });
-                    }
-                }
-
-                if (this.positionX > 360) {
-                    this.positionX -= 360;
-                } else if (this.positionX < 0) {
-                    this.positionX += 360;
-                }
-
-                if (!(this.positionY >= 46 && this.positionY <= 130) && !(this.positionY >= 220 && this.positionY <= 308)) {
-                    if (this.upsideDown) {
-                        if (this.positionX >= 42 && this.positionX <= 130) {
-                            this.calculatedSide = 3;
-                        } else if (this.positionX >= 131 && this.positionX <= 223) {
-                            this.calculatedSide = 2;
-                        } else if (this.positionX >= 224 && this.positionX <= 314) {
-                            this.calculatedSide = 5;
-                        } else {
-                            this.calculatedSide = 4;
-                        }
-                    } else {
-                        if (this.positionX >= 42 && this.positionX <= 130) {
-                            this.calculatedSide = 5;
-                        } else if (this.positionX >= 131 && this.positionX <= 223) {
-                            this.calculatedSide = 4;
-                        } else if (this.positionX >= 224 && this.positionX <= 314) {
-                            this.calculatedSide = 3;
-                        } else {
-                            this.calculatedSide = 2;
-                        }
-                    }
-                } else {
-                    if (this.positionY >= 46 && this.positionY <= 130) {
-                        this.calculatedSide = 6;
-                    }
-
-                    if (this.positionY >= 220 && this.positionY <= 308) {
-                        this.calculatedSide = 1;
-                    }
-                }
-
-                if (this.calculatedSide !== this.currentSide) {
-                    this.currentSide = this.calculatedSide;
-                    this.emit('sideChange');
-                }
-
-            }
-
-            this.element.style[userPrefix.js + 'Transform'] = 'rotateX(' + this.positionY + 'deg) rotateY(' + this.positionX + 'deg)';
-
-            if (this.positionY != this.previousPositionY || this.positionX != this.previousPositionX) {
-                this.previousPositionY = this.positionY;
-                this.previousPositionX = this.positionX;
-
-                this.emit('rotate');
-
-            }
-
-        }
-        var viewport = new Viewport({
-            element: document.getElementsByClassName('cube')[0],
-            fps: 20,
-            sensivity: .1,
-            sensivityFade: .93,
-            speed: 2,
-            touchSensivity: 1.5
-        });
-
-        function Cube(data) {
-            var self = this;
-
-            this.element = data.element;
-            this.sides = this.element.getElementsByClassName('side');
-
-            this.viewport = data.viewport;
-            this.viewport.on('rotate', function() {
-                self.rotateSides();
-            });
-            this.viewport.on('upsideDown', function(obj) {
-                self.upsideDown(obj);
-            });
-            this.viewport.on('sideChange', function() {
-                self.sideChange();
-            });
-        }
-        Cube.prototype.rotateSides = function() {
-            var viewport = this.viewport;
-            if (viewport.positionY > 90 && viewport.positionY < 270) {
-                this.sides[0].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + (viewport.positionX + viewport.torqueX) + 'deg)';
-                this.sides[5].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + -(viewport.positionX + 180 + viewport.torqueX) + 'deg)';
-            } else {
-                this.sides[0].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + (viewport.positionX - viewport.torqueX) + 'deg)';
-                this.sides[5].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + -(viewport.positionX + 180 - viewport.torqueX) + 'deg)';
-            }
-        }
-        Cube.prototype.upsideDown = function(obj) {
-
-            var deg = (obj.upsideDown == true) ? '180deg' : '0deg';
-            var i = 5;
-
-            while (i > 0 && --i) {
-                this.sides[i].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + deg + ')';
-            }
-
-        }
-        Cube.prototype.sideChange = function() {
-
-            for (var i = 0; i < this.sides.length; ++i) {
-                this.sides[i].getElementsByClassName('cube-image')[0].className = 'cube-image';
-            }
-
-            this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[0].className = 'cube-image active';
-
-        }
-
-        new Cube({
-            viewport: viewport,
-            element: document.getElementsByClassName('cube')[0]
-        });
+        $('.single-related-posts__title').matchHeight();
 
     </script>
 
     <script>
-        function setModalMaxHeight(element) {
-            this.$element = $(element);
-            this.$content = this.$element.find('.modal-content');
-            var borderWidth = this.$content.outerHeight() - this.$content.innerHeight();
-            var dialogMargin = $(window).width() < 768 ? 20 : 60;
-            var contentHeight = $(window).height() - (dialogMargin + borderWidth);
-            var headerHeight = this.$element.find('.modal-header').outerHeight() || 0;
-            var footerHeight = this.$element.find('.modal-footer').outerHeight() || 0;
-            var maxHeight = contentHeight - (headerHeight + footerHeight);
-
-            this.$content.css({
-                'overflow': 'hidden'
-            });
-
-            this.$element
-                .find('.modal-body').css({
-                    'max-height': maxHeight,
-                    'overflow-y': 'auto'
-                });
-        }
-
-        $('.modal').on('show.bs.modal', function() {
-            $(this).show();
-            setModalMaxHeight(this);
+        $(".btn-01").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#read-more").offset().top
+                },
+                'slow');
         });
-
-        $(window).resize(function() {
-            if ($('.modal.in').length != 0) {
-                setModalMaxHeight($('.modal.in'));
-            }
+        $(".nav-link-01").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#nav-link-01").offset().top
+                },
+                'slow');
+        });
+        $(".nav-link-02").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#nav-link-02").offset().top
+                },
+                'slow');
+        });
+        $(".nav-link-03").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#nav-link-03").offset().top
+                },
+                'slow');
         });
 
     </script>
-
-    <script>
-        $('#myTabs a').click(function(e) {
-            e.preventDefault()
-            $(this).tab('show')
-        })
-
-    </script>
-
-
-
-    <!-- MODALS -->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Õpilane</h4>
-                </div>
-                <div class="modal-body">
-                    <div>
-
-                        <!-- Nav tabs -->
-                        <!--<div class="tabs single-course-tabs">-->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <a href="#autonoomia1" aria-controls="autonoomia1" role="tab" data-toggle="tab">
-                                <li role="presentation" class="active">Autonoomia
-                                </li>
-                            </a>
-                            <li role="presentation"><a href="#koostoo1" aria-controls="koostoo1" role="tab" data-toggle="tab">Koostöö</a></li>
-                            <li role="presentation"><a href="#teadmusloome1" aria-controls="teadmusloome1" role="tab" data-toggle="tab">Ühine teadmusloome</a></li>
-                        </ul>
-
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="autonoomia1">
-                                <p> Õpilasi julgustatakse algatama ja antakse võimalus ise projekte, üritusi algatada ning märgata ja lahendada probleeme. Projektis võivad noored ise valida rolli, koostada ajakava, seada eesmärgi, pakkuda välja tegevused ja ka osaleda hindamises eneserefleksiooni kaudu. Õpilastele on oluline ka projektide motiveeriv aspekt eduelamuste pakkumisel ja vastutuse kogemus. Lisaks projekti võimalustele võivad õpilased suuremate kodutööde jaoks ise määrata tähtaja. Nad võivad korraldada koolis üritusi ja kaasa rääkida kooli otsustusprotsessides, näiteks otsustada, kuidas sisustada projektinädalat ja teemapäevi.</p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="koostoo1">
-                                <p>Tehakse palju rühmatööd ning meeskonnatööd analüüsitakse kui omaette õpieesmärki. Näiteks rühmatöö puhul projektülesande täitmisel teevad õpilased alati ka rühmatöö analüüsi: kes kuidas panustas, mis läks hästi, mis oleks võinud olla paremini, kuidas üksteist kuulati ja üksteisega arvestati või kuidas protsessi juhiti.</p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="teadmusloome1">
-                                <p>Projektõpe: luuakse seoseid päris eluga (n. raamatupoe külastus ja imiteerimine koolis, kohviku projekt). Elulähedane lõiming: näit. kokandusprojekt Küpsised purgis koostöös kohaliku kutsehariduskeskusega. Heategevusprojektid kogukonna liikme abistamiseks. Näiteks abistati kohalikku ihtüoosihaiget poissi annetuste kogumistega tema raviks. Õpilaste initsiatiivil tehti lasteaialaste emadele emadepäeva kingitus, mis sisaldas laste joonistusi ja mingit emakeeletunnis antud keelelist ülesannet.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="myModalteacher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Õpetaja</h4>
-                </div>
-                <div class="modal-body">
-                    <div>
-
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#autonoomia2" aria-controls="autonoomia2" role="tab" data-toggle="tab">Autonoomia</a></li>
-                            <li role="presentation"><a href="#koostoo2" aria-controls="koostoo2" role="tab" data-toggle="tab">Koostöö</a></li>
-                            <li role="presentation"><a href="#teadmusloome2" aria-controls="teadmusloome2" role="tab" data-toggle="tab">Ühine teadmusloome</a></li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="autonoomia2">
-                                <p>Õpetajad on vabad valima õppematerjale ja tegema õppekava alaseid otsuseid klassiruumi tasandil. Üha rohkem õpetajaid otsustab õpetada ilma õpikuta, kasutades mitmesuguseid alternatiive. Õpetajad ei struktureeri õpilastele antavaid ülesandeid rangelt ette, vaid lubavad õpilastel pakkuda välja erinevaid teid lahenduseni jõudmiseks.</p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="koostoo2">
-                                <p>Lõimitud õppes õpetavad kaks või enam õpetajat koos, n. emakeel ja geograafia (2 õpetajat) või gümnaasiumis ajalugu, kunstiajalugu, kirjandus ja praktiline emakeel (3 õpetajat korraga tunnis). Näiteks lõimitud geograafia ja emakeele tunnis olid korraga klassis kaks õpetajat, ülesanne oli projektilaadne (leida ja pildistada linnas grafiti, kanda koordinaadid kaardile koos leppemärkidega, koostada esitlus rühmatööst ja teha seda korrektses emakeeles). Õpetajad koostasid koostöös tööülesannetega töölehe, mis sisaldas mõlema aine õpieesmärke ja juhendasid õpilasi, kus vaja. Kuna klassides on palju vene emakeelega õpilasi, siis vajasid nad eesti keeles lisajuhendamist. Vahel jagatakse klass ka rühmadeks, kus erinevad õpetajad on erineva rühma juures eraldi ruumis ja siis vahetatakse kohad.</p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="teadmusloome2">
-                                <p>Õpetajad kasutavad nn. „lahtiste uste põhimõtet“, kui uks on lahti jäetud, võib iga kolleeg sisse astuda ja tundi vaadelda. Kasutusel on töövarjusüsteem, käiakse teistes koolides ja asutustes õppimas. Näiteks üks ajaloo- ja ühiskonnaõpetaja käis kohtunikule ja kultuuriministrile töövarjuks. </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="myModalschool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Kool</h4>
-                </div>
-                <div class="modal-body">
-                    <div>
-
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#autonoomia3" aria-controls="autonoomia3" role="tab" data-toggle="tab">Autonoomia</a></li>
-                            <li role="presentation"><a href="#koostoo3" aria-controls="koostoo3" role="tab" data-toggle="tab">Koostöö</a></li>
-                            <li role="presentation"><a href="#teadmusloome3" aria-controls="teadmusloome3" role="tab" data-toggle="tab">Ühine teadmusloome</a></li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="autonoomia3">
-                                <p>Kooli autonoomia seisneb eelkõige õppekava kaudu oma väärtuste, temaatiliste rõhuasetuste ja õppetöövormide valikus. Koolis rõhutatakse peamiste väärtustena ettevõtlike ja vastutustundlike noorte kasvatamist. Lõimitud, Eluline, Kaasatud – need on põhilised märksõnad. Õppekava tasandil on loodud võimalused mitme õpetaja koostöös toimuvate lõimitud kursuste loomiseks, keelekümbluseks ja ettevõtlikkusega seotud üldpädevuste saavutamiseks. Lõimitud kursusi on pakutud alates 2013.-2014. õppeaastast. Probleemiks on, kuidas lõimingut õppekavasse kirja panna, milliseid aspekte rõhutada, et see oleks üldiselt arusaadav. Samuti mõeldakse, kuidas lõimitud kursusi hinnata. Hinnatav töö peab hõlmama kõigi lõimitud ainete komponente, aga tunnistusele on vaja hinne panna eraldi ainete eest. Tegelikult oleks hea, kui riik lubaks panna lõimitud õppeaine eest ühe kokkuvõtva hinde.</p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="koostoo3">
-                                <p>Kooli õppetöö on tihedalt seotud piirkonna asutuste, ettevõtetega (IVEKiga, Kiviõli Seiklusturismi Keskusega, samuti muuseumidega). Kutsutakse külla oma ala eksperte (näiteks teadlasi, kunstnikke) eelkõige Teadlaste Öö festivalil septembris, aga vahel ka muul ajal. Näiteks nn piimakriisi ajal käis külaline rääkimas Eesti põllumajanduse ja piimamajanduse probleemidest ja õpilased pidid end loenguks ette valmistama ajakirjandusest vastavaid artikleid otsides.</p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="teadmusloome3">
-                                <p>Oma tegevuse analüüsimiseks kogutakse tagasisidet õpilastelt ja lapsevanematelt. Kasutatakse 360° kraadi metoodikat, kus õpetaja saab tagasisidet õpilastelt ja lapsevanematelt. Algselt sai tagasisidet ainult kursuse lõpuks, aga nüüd tahetakse ka kursuse keskel koguda tagasisidet. Siiani on tagasisidet kogutud struktureeritud küsimustike kaudu, kuid see ei andnud piisavalt infot lapsevanemate arvamuste põhjuste kohta. Tulevikus plaanitakse küsida rohkem avatud küsimusi, et lapsevanemad tooksid näiteid, mida nad koolilt ootavad või mida annaks paremini teha. Toimuvad aasta kokkuvõtete tegemine, arenguvestlused õpetajatega. Tagasisidet analüüsitakse ja planeeritud tegevustes tehakse vastavalt tagasisidele korrektuure. Näiteks katsetatakse päeva keskel tunniajast liikumisvahetundi, mis võimaldaks õpetajatel koostööd teha ja vaadatakse tagasiside põhjal, kas see õigustas end. Osaletakse ettevõtlike koolide enesehindamissüsteemis: pronks-, hõbe- ja kuldstandard. Hetkel püüdleb kool kuldstandardi poole. Omamoodi tagasiside on ka 2016. aastal saadud „Junior Achievement“ autasu. Algul tehti see viga, et ei pandud kõike kirja, mida tehti. Hiljem oli väga raske meenutada, mida aasta jooksul tehti. Nüüd pannakse hoolsamalt kõiki üritusi ja tegevusi kirja, et saaks tagantjärele tööd paremini analüüsida.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--- MODALS END-->
 
 
 
